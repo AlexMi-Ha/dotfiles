@@ -1,0 +1,35 @@
+[user]
+    email = alex@hagl.de
+    name = Alex
+
+[github]
+    user = AlexMi-Ha
+
+[core]
+    excludesfile = ~/.dotfiles/git/ignore
+    editor = nvim
+    autocrlf = false
+    
+[pull]
+    rebase = true
+
+[rebase]
+    autoStash = true
+
+[init]
+    defaultBranch = main
+
+[push]
+    default = simple
+
+[grep]
+    lineNumber = true
+
+[alias]
+    amend = commit --amend --reuse-message=HEAD
+    s = status
+    unstage = reset --hard HEAD
+
+    l = log --graph --abbrev-commit --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
+    ll = log --graph --abrev-commit --pretty=oneline
+    lm = log --pretty=format:'* %s (%h)'
