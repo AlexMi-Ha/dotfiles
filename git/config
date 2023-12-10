@@ -28,7 +28,7 @@
 [alias]
     amend = commit --amend --reuse-message=HEAD
     s = status
-    unstage = reset --hard HEAD
+    unstage = restore --staged .
 
     l = log --graph --abbrev-commit --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
     ll = log --graph --abrev-commit --pretty=oneline
