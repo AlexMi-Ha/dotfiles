@@ -12,6 +12,11 @@ var selection = Prompt.Select("Select your gitignore to be generated", files);
 
 Console.WriteLine("Writing your .gitignore file!");
 var ignoreContent = File.ReadAllText(Path.Combine(userPath, selection));
-ignoreContent = $"# ---------------- {selection} ----------------\n\n{ignoreContent}\n";
+ignoreContent = $"# ---------------- {selection} ----------------\n\n{ignoreContent}";
 
-File.AppendAllText(Path.Combine(Directory.GetCurrentDirectory(), ".gitignore"), ignoreContent);
+var gitignorePath = Path.Combine(Directory.GetCurrentDirectory(), ".gitignore");
+if(File.Exists(gitignorePath)) {
+    ignoreContent = "\n\n" + ignoreContent;
+}
+
+File.AppendAllText(gitignorePath, ignoreContent);
