@@ -26,10 +26,14 @@
     lineNumber = true
 
 [alias]
-    amend = commit --amend --reuse-message=HEAD
-    s = status
+    amend = commit --amend -c HEAD
+    s = status -s -b
     unstage = restore --staged .
+	undo = reset --soft HEAD^
+
+	all = add -A
 
     l = log --graph --abbrev-commit --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
     ll = log --graph --abbrev-commit --pretty=oneline
     lm = log --pretty=format:'* %s (%h)'
+	
