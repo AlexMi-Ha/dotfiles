@@ -26,14 +26,25 @@
     lineNumber = true
 
 [alias]
-    amend = commit --amend -c HEAD
-    s = status -s -b
-    unstage = restore --staged .
-	undo = reset --soft HEAD^
+    amend = commit --amend -c HEAD  # Amend staged changes to the last commit and edit message again
+    s = status -s -b                # View changes in short format and the current branch
+    unstage = restore --staged .    # Unstage staged changes
+    undo = reset --soft HEAD^       # Undo the last commit but keep the changes made in it
 
-	all = add -A
+    all = add -A                    # Add all files to staging
+    cm = commit -m                  # Commit with a message
 
+    # Short log
     l = log --graph --abbrev-commit --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
+    # Log oneline
     ll = log --graph --abbrev-commit --pretty=oneline
+    # Log lame format
     lm = log --pretty=format:'* %s (%h)'
+    # Log the last commit
+    llast = log -1 HEAD --stat
+	
+    # View all aliases
+    alias = "! grep -Ezo '\\[alias\\].*#\\[endofalias\\]' ~/.gitconfig"
+
+#[endofalias]
 	

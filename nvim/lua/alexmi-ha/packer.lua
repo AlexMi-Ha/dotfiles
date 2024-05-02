@@ -31,6 +31,7 @@ return require('packer').startup(function(use)
 	  requires = {
 		  --- Uncomment these if you want to manage LSP servers from neovim
 		   {'williamboman/mason.nvim'},
+    Added post mappings to express app
 		   {'williamboman/mason-lspconfig.nvim'},
 
     -- LSP Support
