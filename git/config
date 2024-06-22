@@ -48,3 +48,5 @@
 
 #[endofalias]
 	
+[credential]
+	helper = store
