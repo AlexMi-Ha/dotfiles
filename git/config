@@ -9,7 +9,7 @@
     excludesfile = ~/.dotfiles/git/ignore
     editor = nvim
     autocrlf = false
-    
+
 [pull]
     rebase = true
 
@@ -31,6 +31,8 @@
     unstage = restore --staged .    # Unstage staged changes
     undo = reset --soft HEAD^       # Undo the last commit but keep the changes made in it
 
+    rv = remote -v
+
     all = add -A                    # Add all files to staging
     cm = commit -m                  # Commit with a message
 
@@ -42,11 +44,11 @@
     lm = log --pretty=format:'* %s (%h)'
     # Log the last commit
     llast = log -1 HEAD --stat
-	
+
     # View all aliases
     alias = "! grep -Ezo '\\[alias\\].*#\\[endofalias\\]' ~/.gitconfig"
 
 #[endofalias]
-	
+
 [credential]
 	helper = store
